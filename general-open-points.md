@@ -1,0 +1,17 @@
+# General open points
+
+- `useDeliveryFormPage.removePdf`: the local `const load = latestLoad` shadows the view model's `load()` (rename, e.g. `loadAtStart`), and two PDF removals finishing out of order are handled but untested. (S-2 review, S3/S4)
+    
+- Later story (take after S-7): the app calculates the price range itself from scaled comparable costs (low / median / high, tickboxes, live recalculation), Claude as optional reviewer; reverses SPEC §3 "no automatic price prediction" and replaces the range Claude gives in the S-7 prompt. (S-7 external review)
+- Later story: capture incoterm, load type (FCL/LCL), scope checkboxes, freight vs. other cost split, buy vs. sell price, quote date, POL/POD, original currency, DG/non-stackable flags. (S-7 external review)
+- Later story: region fallback before dropping a country, "exclude from estimates" flag with reason, "quote only" record type for lost quotes. (S-7 external review)
+- Later story: manually maintained freight index table (WCI/FBX) shown per comparable; later applied to the freight part only once the cost split exists. (S-7 external review)
+- Later story: partner rate cards (lane, mode, validity, rate per W/M or kg, minimum, fixed fees) and per-lane fixed + rate fit where n >= 8. (S-7 external review)
+- Confirm with Alice the volumetric ratio her rail partners invoice on (333 kg/m³ assumed in F-20). (S-7)
+- Estimate screen: the comparables table is one aria-live region, so a screen reader re-reads it on every lookup; only a short status line should be live. (S-7 frontend review)
+- Estimate screen: during the 300 ms typing pause the prompt shows the new volume/weight next to the previous chargeable kg and comparables, and copy stays enabled. The test "looks up once, 300 ms after typing in volume pauses" asserts the prompt stays visible and must change with the fix. (S-7 frontend re-review)
+- Later story: record every offer received per delivery (company, price, date), not just the accepted one. (S-9 refinement)
+- Later story: record the delivery company (carrier) on a delivery, together with the offers above. (S-9 refinement)
+- Later story: overdue warning on the board. An On the way card past its expected arrival date is marked, more strongly as time passes: late up to 1 week, up to 1 month, more than 1 month (most urgent). (S-9 refinement)
+- Board date dialog: once Save is pressed, the disabled submit button pushes keyboard focus out of the open dialog until the save returns (`MoveDatesDialog.vue:104`). Escape still works. (S-9 frontend review round 3)
+- Backend `created_at`/`updated_at` come from system time, while other "today" values use the injected `Clock`; tests cannot pin them and dates can disagree near midnight. (S-9 backend-developer)
