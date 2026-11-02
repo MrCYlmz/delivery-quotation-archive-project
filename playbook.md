@@ -51,7 +51,7 @@ One repo, three modules:
 - Hand-written `NamedParameterJdbcTemplate`, not Spring Data JDBC repositories: no SQLite dialect, and aggregate saves would re-id PDFs (SPEC SD-5).
 - `foreign_keys=on` on the JDBC url: SQLite enforces foreign keys per connection (SPEC SD-6).
 - Frontend built into the jar by `frontend-maven-plugin`: one build on Linux and on the Windows runner (SPEC SD-7).
-- The parser's acceptance test (41 items, 12 pallets, 13.07 m³, 3122 kg on both fixtures) must stay green; a change that breaks it is wrong (SPEC §12).
+- The parser's acceptance test (20 items, 6 pallets, 7.42 m³, 1580 kg on both fixtures) must stay green; a change that breaks it is wrong (SPEC §12).
 - Explicit `TransactionTemplate` in services, not `@Transactional`: file deletions must run outside the transaction.
 - The service layer returns web DTOs and accepts `MultipartFile`; repos and domain never see DTOs. One service, so a separate mapping layer would add nothing.
 - English-only UI without a translation layer: one user.
