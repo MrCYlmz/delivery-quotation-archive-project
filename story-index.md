@@ -12,3 +12,4 @@
 | S-7 Price estimate with Claude (retro pending architect: `retro.md`) | [#9](https://github.com/MrCYlmz/dew-delivery-quotation-manager/pull/9) | `/home/learn/Desktop/Repos/delivery-quotation-archive-story-archive/S-7` |
 | S-9 Delivery status board and offer price (retro pending architect: `retro.md`) | [#10](https://github.com/MrCYlmz/dew-delivery-quotation-manager/pull/10) | `/home/learn/Desktop/Repos/delivery-quotation-archive-story-archive/S-9` |
 | S-11 Generic test fixtures and examples (retro pending architect: `retro.md`) | [#12](https://github.com/MrCYlmz/dew-delivery-quotation-manager/pull/12) | `/home/learn/Desktop/Repos/delivery-quotation-archive-story-archive/S-11` |
+| S-10 Arrival dates and overdue warning (retro pending architect: `retro.md`) | [#11](https://github.com/MrCYlmz/dew-delivery-quotation-manager/pull/11) | `/home/learn/Desktop/Repos/delivery-quotation-archive-story-archive/S-10` |
