@@ -18,4 +18,5 @@ archive application. It holds no application code. It holds:
 - `playbook.md`, `general-open-points.md`, `story-index.md`: decisions, open
   points and the log of closed stories.
 
-The application repository itself is not part of this demonstration.
+The application the team built is published as a demonstration snapshot at
+[dew-delivery-quotation-manager-demo](https://github.com/MrCYlmz/dew-delivery-quotation-manager-demo): no security checks, not for use.
